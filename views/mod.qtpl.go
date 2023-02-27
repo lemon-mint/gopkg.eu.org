@@ -68,7 +68,7 @@ func StreamMod(qw422016 *qt422016.Writer, Root, VCS, RepoURL, Description string
 	qw422016.E().S(Root)
 //line views/mod.qtpl:16
 	qw422016.N().S(`</h1>
-        <hr/>
+        <br/>
         <p>Documentation for this module is available at <a href="https://pkg.go.dev/`)
 //line views/mod.qtpl:18
 	qw422016.E().S(Root)
