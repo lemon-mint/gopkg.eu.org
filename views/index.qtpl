@@ -19,7 +19,7 @@ type Module = types.Module
 </head>
 <body>
     <h1>gopkg.eu.org Module Index</h1>
-    <hr>
+    <br/>
     <div class="box">
         <ul>
             {% for _, p := range Modules %}
