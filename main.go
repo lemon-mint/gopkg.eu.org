@@ -80,8 +80,14 @@ func parseSource(m *Module) error {
 }
 
 func renderTemplate(m *Module) error {
-	path := filepath.Join(DIST_PATH, m.Path)
-	index := filepath.Join(path, "index.html")
+	dir := filepath.Dir(m.Path)
+	var index string
+	if dir == "." {
+		index = filepath.Join(DIST_PATH, m.Path+".html")
+	} else {
+		base := filepath.Base(m.Path)
+		index = filepath.Join(DIST_PATH, dir, base+".html")
+	}
 	file, err := os.Create(index)
 	if err != nil {
 		return err
@@ -202,10 +208,13 @@ func main() {
 		// log.Printf("  path: %s", modules[i].Path)
 		// log.Printf("   vcs: %s", modules[i].VCS)
 		// log.Printf("   url: %s\n", modules[i].RepoURL)
-		path := filepath.Join(DIST_PATH, modules[i].Path)
-		err = os.MkdirAll(path, 0755)
-		if err != nil {
-			log.Fatal(err)
+
+		dir := filepath.Dir(modules[i].Path)
+		if dir != "." {
+			err = os.MkdirAll(filepath.Join(DIST_PATH, dir), 0755)
+			if err != nil {
+				log.Fatal(err)
+			}
 		}
 
 		// Render Template
