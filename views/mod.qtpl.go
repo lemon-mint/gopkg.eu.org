@@ -62,55 +62,57 @@ func StreamMod(qw422016 *qt422016.Writer, Root, VCS, RepoURL, Description string
     <link rel="stylesheet" href="/_static/main.css">
 </head>
 <body>
-    <h1>`)
-//line views/mod.qtpl:15
+    <div class="box">
+        <h1>`)
+//line views/mod.qtpl:16
 	qw422016.E().S(Root)
-//line views/mod.qtpl:15
+//line views/mod.qtpl:16
 	qw422016.N().S(`</h1>
-    <hr/>
-    <p>Documentation for this module is available at <a href="https://pkg.go.dev/`)
-//line views/mod.qtpl:17
+        <hr/>
+        <p>Documentation for this module is available at <a href="https://pkg.go.dev/`)
+//line views/mod.qtpl:18
 	qw422016.E().S(Root)
-//line views/mod.qtpl:17
+//line views/mod.qtpl:18
 	qw422016.N().S(`">`)
-//line views/mod.qtpl:17
+//line views/mod.qtpl:18
 	qw422016.E().S(Root)
-//line views/mod.qtpl:17
-	qw422016.N().S(`</a>.</p>
-    
-    <p>`)
-//line views/mod.qtpl:19
+//line views/mod.qtpl:18
+	qw422016.N().S(`</a></p>
+
+        <p>`)
+//line views/mod.qtpl:20
 	qw422016.E().S(Description)
-//line views/mod.qtpl:19
+//line views/mod.qtpl:20
 	qw422016.N().S(`</p>
+    </div>
 </body>
 </html>
 `)
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 }
 
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 func WriteMod(qq422016 qtio422016.Writer, Root, VCS, RepoURL, Description string) {
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 	qw422016 := qt422016.AcquireWriter(qq422016)
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 	StreamMod(qw422016, Root, VCS, RepoURL, Description)
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 	qt422016.ReleaseWriter(qw422016)
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 }
 
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 func Mod(Root, VCS, RepoURL, Description string) string {
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 	qb422016 := qt422016.AcquireByteBuffer()
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 	WriteMod(qb422016, Root, VCS, RepoURL, Description)
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 	qs422016 := string(qb422016.B)
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 	qt422016.ReleaseByteBuffer(qb422016)
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 	return qs422016
-//line views/mod.qtpl:22
+//line views/mod.qtpl:24
 }

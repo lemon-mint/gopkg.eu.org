@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="/_static/main.css">
 </head>
 <body>
-    <h1>{%s Root %}</h1>
-    <hr/>
-    <p>Documentation for this module is available at <a href="https://pkg.go.dev/{%s Root %}">{%s Root %}</a>.</p>
-    
-    <p>{%s Description %}</p>
+    <div class="box">
+        <h1>{%s Root %}</h1>
+        <hr/>
+        <p>Documentation for this module is available at <a href="https://pkg.go.dev/{%s Root %}">{%s Root %}</a></p>
+
+        <p>{%s Description %}</p>
+    </div>
 </body>
 </html>
 {% endfunc %}
