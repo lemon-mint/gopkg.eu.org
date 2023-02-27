@@ -1,0 +1,22 @@
+{% func Mod(Root, VCS, RepoURL, Description string) %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%s Root %}</title>
+    <meta name="og:title" content="{%s Root %}">
+    <meta name="og:description" content="{%s Description %}">
+    <meta name="description" content="{%s Description %}">
+    <meta name="go-import" content="{%s Root %} {%s VCS %} {%s RepoURL %}">
+    <link rel="stylesheet" href="/_static/main.css">
+</head>
+<body>
+    <h1>{%s Root %}</h1>
+    <hr/>
+    <p>Documentation for this module is available at <a href="https://pkg.go.dev/{%s Root %}">{%s Root %}</a>.</p>
+    
+    <p>{%s Description %}</p>
+</body>
+</html>
+{% endfunc %}

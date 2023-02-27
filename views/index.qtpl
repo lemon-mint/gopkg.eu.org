@@ -1,0 +1,35 @@
+{% import "github.com/lemon-mint/gopkg.eu.org/types" %}
+
+{% code
+type Module = types.Module
+%}
+
+{% func Index(Modules []*Module) %}<!DOCTYPE html>
+{% stripspace %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gopkg.eu.org Module Index</title>
+    <meta name="og:title" content="gopkg.eu.org Module Index">
+    <meta name="og:description" content="A Module index for Go Modules hosted on gopkg.eu.org">
+    <meta name="description" content="A Module index for Go Modules hosted on gopkg.eu.org">
+    <link rel="stylesheet" href="/_static/main.css">
+</head>
+<body>
+    <h1>gopkg.eu.org Module Index</h1>
+    <hr>
+    <div class="box">
+        <ul>
+            {% for _, p := range Modules %}
+            <li>
+                <a href="/{%s p.Path %}">{%s p.Root %}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+{% endstripspace %}
+{% endfunc %}

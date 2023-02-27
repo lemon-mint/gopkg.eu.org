@@ -1,0 +1,39 @@
+html, body, div, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: #05152a;
+    color: #f2e7d5;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    padding: 1em;
+    margin: 1em;
+    background-color: #05152a;
+    max-width: 600px;
+}
+
+a:link {
+    color: #f2e7d5;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #f2e7d5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f2e7d5;
+    text-decoration: none;
+}
