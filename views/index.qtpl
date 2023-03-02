@@ -19,6 +19,8 @@ type Module = types.Module
 </head>
 <body>
     <h1>gopkg.eu.org Module Index</h1>
+    <span class="description">A Module index for Go Modules hosted on gopkg.eu.org</span>
+    <span class="description">Index Repository: <a href="https://github.com/lemon-mint/gopkg.eu.org">https://github.com/lemon-mint/gopkg.eu.org</a></span>
     <br/>
     <div class="box">
         <ul>

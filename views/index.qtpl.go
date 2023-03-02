@@ -29,51 +29,51 @@ func StreamIndex(qw422016 *qt422016.Writer, Modules []*Module) {
 	qw422016.N().S(`<!DOCTYPE html>
 `)
 //line views/index.qtpl:8
-	qw422016.N().S(`<html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>gopkg.eu.org Module Index</title><meta name="og:title" content="gopkg.eu.org Module Index"><meta name="og:description" content="A Module index for Go Modules hosted on gopkg.eu.org"><meta name="description" content="A Module index for Go Modules hosted on gopkg.eu.org"><link rel="stylesheet" href="/_static/main.css"></head><body><h1>gopkg.eu.org Module Index</h1><br/><div class="box"><ul>`)
-//line views/index.qtpl:25
+	qw422016.N().S(`<html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>gopkg.eu.org Module Index</title><meta name="og:title" content="gopkg.eu.org Module Index"><meta name="og:description" content="A Module index for Go Modules hosted on gopkg.eu.org"><meta name="description" content="A Module index for Go Modules hosted on gopkg.eu.org"><link rel="stylesheet" href="/_static/main.css"></head><body><h1>gopkg.eu.org Module Index</h1><span class="description">A Module index for Go Modules hosted on gopkg.eu.org</span><span class="description">Index Repository: <a href="https://github.com/lemon-mint/gopkg.eu.org">https://github.com/lemon-mint/gopkg.eu.org</a></span><br/><div class="box"><ul>`)
+//line views/index.qtpl:27
 	for _, p := range Modules {
-//line views/index.qtpl:25
+//line views/index.qtpl:27
 		qw422016.N().S(`<li><a href="/`)
-//line views/index.qtpl:27
+//line views/index.qtpl:29
 		qw422016.E().S(p.Path)
-//line views/index.qtpl:27
+//line views/index.qtpl:29
 		qw422016.N().S(`">`)
-//line views/index.qtpl:27
+//line views/index.qtpl:29
 		qw422016.E().S(p.Root)
-//line views/index.qtpl:27
+//line views/index.qtpl:29
 		qw422016.N().S(`</a></li>`)
-//line views/index.qtpl:29
+//line views/index.qtpl:31
 	}
-//line views/index.qtpl:29
+//line views/index.qtpl:31
 	qw422016.N().S(`</ul></div></body></html>`)
-//line views/index.qtpl:34
+//line views/index.qtpl:36
 	qw422016.N().S(`
 `)
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 }
 
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 func WriteIndex(qq422016 qtio422016.Writer, Modules []*Module) {
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 	qw422016 := qt422016.AcquireWriter(qq422016)
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 	StreamIndex(qw422016, Modules)
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 	qt422016.ReleaseWriter(qw422016)
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 }
 
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 func Index(Modules []*Module) string {
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 	qb422016 := qt422016.AcquireByteBuffer()
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 	WriteIndex(qb422016, Modules)
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 	qs422016 := string(qb422016.B)
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 	qt422016.ReleaseByteBuffer(qb422016)
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 	return qs422016
-//line views/index.qtpl:35
+//line views/index.qtpl:37
 }
