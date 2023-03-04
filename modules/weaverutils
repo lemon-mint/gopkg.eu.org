@@ -1,0 +1,4 @@
+root: gopkg.eu.org/weaverutils
+vcs: git
+url: https://github.com/lemon-mint/weaverutils.git
+description: Service Weaver Utilities
