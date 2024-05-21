@@ -1,0 +1,4 @@
+root: gopkg.eu.org/exppkgs
+vcs: git
+url: https://github.com/lemon-mint/exp-pkgs.git
+description: Experimental Packages
