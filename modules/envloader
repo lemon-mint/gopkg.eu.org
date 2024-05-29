@@ -1,0 +1,4 @@
+root: gopkg.eu.org/envloader
+vcs: git
+url: https://github.com/unsafe-risk/envloader.git
+description: envloader is a Go package that loads environment variables from a .env file and binds them to a struct.
